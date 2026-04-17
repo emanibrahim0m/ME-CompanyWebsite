@@ -1,0 +1,84 @@
+/* --- JetBrainsMono- Font Family --- */
+/* Regular */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./../fonts/JetBrains_Mono/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+/* Medium */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./../fonts/JetBrains_Mono/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+/* SemiBold */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./../fonts/JetBrains_Mono/JetBrainsMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* --- Cairo Font Family --- */
+/* Regular */
+@font-face {
+    font-family: 'Cairo';
+    src: url('./../fonts/Cairo/Cairo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+/* Medium */
+@font-face {
+    font-family: 'Cairo';
+    src: url('./../Fonts/Cairo/Cairo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/* Bold */
+@font-face {
+    font-family: 'Cairo';
+    src: url('./../Fonts/Cairo/Cairo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Color Palette - Typography */
+:root {
+    /*  Color Palette */
+    --Brightyellow: #FDCE15;
+    --Bronze-gold: #A38740;
+    --color-header: #1F2A3A;
+    --Warm-cream: #F8F6F2;
+    --Dark-gray: #333;
+
+    /*  Typography */
+    --En-font: 'JetBrainsMono', sans-serif;
+    --Ar-font: 'Cairo', sans-serif;
+    --textsize-large: clamp(2.5rem, 5vw, 2rem);
+    --textsize-medium: clamp(1.5rem, 4vw, 2rem);
+    --textsize-regular: 1.125rem;
+    --textsize-small: 1rem;
+    --textsize-tiny: 0.875rem;
+    --border-radius: 3px;    
+}
+
+/* Heading Text */
+h1{font-size: clamp(2.5rem, 8vw, 4.5rem);}
+h2{font-size: clamp(2rem, 6vw, 3.5rem);}
+h3{font-size: clamp(1.5rem, 4vw, 2.25rem);}
+h4{font-size: clamp(1.25rem, 3vw, 1.75rem);}
+h5{font-size: clamp(1rem, 2.5vw, 1.25rem);}
+h6{font-size: clamp(0.875rem, 2vw, 1rem);}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+h4, h5, h6 {
+    line-height: 1.6;
+}
