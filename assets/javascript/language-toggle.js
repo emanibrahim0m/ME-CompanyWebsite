@@ -2,12 +2,13 @@
 const translations = {
     en: { 
         welcome: "Welcome",
+        phone: "+1 234 567 890",
     },
     ar: { 
         welcome: "مرحباً",
+        phone: "٠١١١٤٩٤٩١٨١",
     }
 };
-
 
 // Language Toggle
 let currentLang = 'en';
@@ -32,6 +33,15 @@ function setLanguage(lang) {
     // Update Button Active States
     document.querySelectorAll('.lang-button').forEach(btn => {
         btn.classList.remove('lang-button-active');
+    });
+
+    // Update el classes for RTL
+    document.querySelectorAll('.rtl').forEach(el => {
+        if (lang === 'ar') {
+            el.classList.add('flip-rtl');
+        } else {
+            el.classList.remove('flip-rtl');
+        }
     });
     
     const activeBtn = document.getElementById(`btn-${lang}`);

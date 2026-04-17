@@ -2,17 +2,19 @@
 /* Regular */
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('./../fonts/JetBrains_Mono/JetBrainsMono-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-/* Medium */
-@font-face {
-  font-family: 'JetBrains Mono';
   src: url('./../fonts/JetBrains_Mono/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
+
+/* Medium */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./../fonts/JetBrains_Mono/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* SemiBold */
 @font-face {
   font-family: 'JetBrains Mono';
@@ -30,6 +32,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* Medium */
 @font-face {
     font-family: 'Cairo';
@@ -38,11 +41,12 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* Bold */
 @font-face {
     font-family: 'Cairo';
     src: url('./../Fonts/Cairo/Cairo-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-weight: 600 700;
     font-style: normal;
     font-display: swap;
 }
@@ -52,12 +56,12 @@
     /*  Color Palette */
     --Brightyellow: #FDCE15;
     --Bronze-gold: #A38740;
-    --color-header: #1F2A3A;
+    --Dark-blue: #1F2A3A;
     --Warm-cream: #F8F6F2;
     --Dark-gray: #333;
 
     /*  Typography */
-    --En-font: 'JetBrainsMono', sans-serif;
+    --En-font: 'JetBrains Mono', sans-serif;
     --Ar-font: 'Cairo', sans-serif;
     --textsize-large: clamp(2.5rem, 5vw, 2rem);
     --textsize-medium: clamp(1.5rem, 4vw, 2rem);
@@ -93,25 +97,137 @@ html[lang="ar"] {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--Warm-cream);
 }
 
 body {
+    background-color: var(--Warm-cream);
     font-family: var(--main-font);
     line-height: 1.6; 
-    padding: 0 7%;
 }
 
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    padding: 0 8%;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
     list-style: none;
 }
 
+img {
+    background-color: transparent;
+}
+
+.flip-rtl {
+    transform: scaleX(-1);
+}
+
+/* Componants */
+/* Arrow Tag */
+.arrow-tag {
+    background-color: var(--Brightyellow);
+    border-radius: var(--border-radius);
+}
+.arrow-left {
+    transform: scaleX(-1);
+}
+
+/* social Componant */
+.social-componant {
+    display: flex;
+    align-items: center;
+}
+
+.social-componant-v1 {
+    gap: 0.75rem;
+}
+
+.social-componant-v2 {
+    gap: 2rem;
+}
+
+.social-link {
+    color: var(--Dark-blue);
+    font-size: var(--textsize-regular);
+}
+
+
+/* Lang Button */
+.lang-button {
+    background-color: var(--Brightyellow);
+    color: var(--Dark-blue);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: var(--textsize-small);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.lang-button-active {
+    background-color: var(--Dark-blue);
+    color: var(--Warm-cream);
+}
+
+.lang-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color : var(--Dark-gray);
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: clamp(var(--textsize-tiny), 1vw, var(--textsize-small));
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    padding: 0.4rem 0.3rem 0.4rem 0.7rem;
+    border-radius: var(--border-radius);
+}
+
+.button:hover {
+    transform: perspective(1000px) translateZ(50px);
+}
+
+html[lang="ar"] .button {
+    padding: 0.4rem 0.7rem 0.4rem 0.3rem;
+}
+
+.button-primary-yellow {
+    font-weight: 600;
+    background-color: var(--Brightyellow);
+}
+
+.button-primary-light {
+    font-weight: 600;
+    background-color: var(--Warm-cream);
+}
+
+/* Button Secondary */
+.button-Secondary {
+    background-color: var(--Dark-blue);
+    color: var(--Warm-cream);
+    padding: 0.6rem 0.6rem;
+    gap: 3rem;
+}
+.btn-s-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.4rem;
+    btn-text {
+        font-size: var(--textsize-tiny);
+        color: var(--Brightyellow);
+    }
+}
