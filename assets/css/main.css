@@ -88,5 +88,30 @@ html[lang="ar"] {
     --main-font: var(--Ar-font);
 }
 
+/* General setting */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--Warm-cream);
+}
 
+body {
+    font-family: var(--main-font);
+    line-height: 1.6; 
+    padding: 0 7%;
+}
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
 
