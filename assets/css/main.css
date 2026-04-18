@@ -212,6 +212,7 @@ img {
     border: none;
     padding: 0.4rem 0.3rem 0.4rem 0.7rem;
     border-radius: var(--border-radius);
+    width: fit-content;
 }
 
 .button:hover {
@@ -323,8 +324,7 @@ html[lang="ar"] .button {
     }
 
     .ham-menu {
-        display: block;
-        
+        display: block;  
     }
 
     .nav-list {
@@ -457,6 +457,74 @@ html[lang="ar"] .button {
 
     .footer-bottom {
         flex-wrap: wrap;
-    }
-    
+    }    
+}
+
+/* Hero section v1 - v2 */
+.hero-v1-v2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    height: 100%;
+    position: relative; 
+    min-height: 80vh;
+    margin-bottom: 3.5rem;
+}
+
+.hero-v1 {
+    align-items: flex-start;
+}
+
+.hero-v2 {
+    align-items: center;
+}
+
+.hero-v1-v2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1000;
+}
+
+.hero-v1::before {
+    mask-image: linear-gradient(to right, transparent, var(--Dark-blue));
+    background-image: url('./../images/hero/hero-bg.jpg');
+}
+
+.hero-v2::before {
+    filter: brightness(150%) blur(0.3rem) contrast(50%);
+    background-image: url('./../images/hero/insulation-options-for-steel-buildings.jpg');
+}
+
+html[lang="ar"] .hero-v1::before {
+    mask-image: linear-gradient(to right, transparent, var(--Dark-blue));
+    transform: scaleX(-1);
+}
+
+.hero-highlight, .hero-description-v2 {
+    color: var(--Brightyellow);
+    text-shadow: 2px 2px 4px var(--Dark-blue);
+}
+.hero-highlight-v2 {
+    color: var(--Dark-blue);
+    text-align: center 
+}
+
+.hero-description-v1 {
+    font-weight: 700;
+    max-width: 55%;
+}
+
+.Buttons-container-v1 {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }

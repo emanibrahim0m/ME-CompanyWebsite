@@ -81,7 +81,6 @@ header.innerHTML = `
             stroke-width="2"
             stroke-linecap="round"
           />
-          >
         </svg>
       </div>
     </nav>
