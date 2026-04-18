@@ -52,6 +52,10 @@ function setLanguage(lang) {
     if (logoimg) {
         logoimg.src = `./assets/images/logo/Logo horizontal ${lang === 'ar' ? 'rtl' : 'ltr'}.png`;
     }
+    const logoimgAr = document.querySelector(".img-logo-ar");
+    if (logoimgAr) {
+        logoimgAr.src = `./assets/images/logo/Logo ${lang === 'ar' ? 'rtl' : 'ltr'}.png`;
+    }
 
 }
 

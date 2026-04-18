@@ -2,7 +2,7 @@
 const header = document.querySelector("#header");
 
 // topbar
-header.innerHTML += `
+header.innerHTML = `
     <!-- Header -->
     <header>
       <!-- contact-top-bar -->
@@ -35,8 +35,8 @@ header.innerHTML += `
           </a>
         </div>
         <div class="topbar-leftside">
-          <button class="lang-button" id="btn-en">EN</button>
-          <button class="lang-button" id="btn-ar">AR</button>
+          <button class="button-y lang-button" id="btn-en">EN</button>
+          <button class="button-y lang-button" id="btn-ar">AR</button>
         </div>
       </div>
     </header>
@@ -55,7 +55,7 @@ header.innerHTML += `
         <li class="nav-item"><a href="./about.html">About</a></li>
         <li class="nav-item"><a href="./products.html">Products</a></li>
         <li class="nav-item"><a href="./projects.html">Projects</a></li>
-        <li class="nav-item"><a href="">Contact US</a></li>
+        <li class="nav-item"><a href="./contact.html">Contact US</a></li>
         <button class="button button-primary-light nav-btn">
           GET A Quote
           <img
@@ -103,3 +103,101 @@ window.addEventListener('scroll', () => {
         nav_list.classList.remove("nav-bottom");
     }
 });
+
+// Footer
+const footer = document.querySelector("#footer");
+footer.innerHTML = `
+<div class="footer-heading">
+        <div class="footer-head">
+          <h3>Let's Create Your Ideal Space</h3>
+          <p>
+            Together, we'll design and build a space that perfectly matches your
+            vision, needs, and lifestyle.
+          </p>
+        </div>
+        <div class="subscribe-form">
+          <input type="email" placeholder="Enter your Email" />
+          <button class="button-y">Subscribe</button>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-body">
+        <div class="footer-logo-container">
+          <img
+            src="./assets/images/logo/Logo ltr.png"
+            alt="img-Logo"
+            class="img-logo-ar"
+          />
+          <p>
+            Revolutionizing the construction industry with innovative solutions
+            and expert craftsmanship.
+          </p>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/middleeastegyptco"
+              class="social-circle"
+            >
+              <img
+                src="./assets/images/icons/facebook-y.svg"
+                alt="arrow"
+                width="28"
+                height="28"
+                class="social-icon rtl"
+              />
+            </a>
+            <a href="mailto:middleeastco.eg@hotmail.com" class="social-circle">
+              <img
+                src="./assets/images/icons/mail-sq-light.svg"
+                alt="arrow"
+                width="28"
+                height="28"
+                class="social-icon rtl"
+              />
+            </a>
+            <a href="https://wa.me/201114949181" class="social-circle">
+              <img
+                src="./assets/images/icons/whatsapp-y.svg"
+                alt="arrow"
+                width="28"
+                height="28"
+                class="social-icon rtl"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-container">
+          <div class="footer-links">
+            <h6>Navigation</h6>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./services.html">Service</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./assets/documents/MiddleEast-Brochure 2025.pdf" download>MiddleEast-Brochure 2025</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h6>Utility Pages</h6>
+            <ul>
+              <li><a href="./about.html">Our Mission</a></li>
+              <li><a href="./about.html">Our Vision</a></li>
+              <li><a href="./about.html">Our History</a></li>
+              </ul>
+              </div>
+              <div class="footer-links">
+              <h6>Contact</h6>
+              <p>Alexandria, Egypt</p>
+              <p>middleeastco.eg@hotmail.com</p>
+              <p>+20 111 039 8275</p>
+              </div>
+              </div>
+              </div>
+              <hr class="footer-divider" />
+              <div class="footer-bottom">
+              <p>© Middle East 2026. All rights reserved.</p>
+              <div class="bottom-links">
+              <a href="#">Term of service</a>
+              <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+`;
