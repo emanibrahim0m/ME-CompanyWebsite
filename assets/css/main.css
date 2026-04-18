@@ -528,3 +528,82 @@ html[lang="ar"] .hero-v1::before {
     gap: 1rem;
     margin-top: 2rem;
 }
+
+/* Cards (product - project) */
+.card, .product-details, .product-section, .projects-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-section, .projects-section {
+    padding: 3% clamp(10%, 2vw, 18%);
+    gap: 3rem;
+}
+.card {
+    background-color: #e9e8e8;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.product-details {
+    justify-items: start;
+}
+.card-img {
+    aspect-ratio: 4/3;
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product{
+    padding-top: 0.1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px dashed gray;
+    font-size: var(--textsize-tiny);
+}
+
+@media screen and (max-width: 800px) {
+    .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .card-container {
+    grid-template-columns: 1fr;
+    }
+}
+
+/* Projects Section */
+.featured-project {
+    background-color: #e9e8e8;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+}
+
+.featured-img {
+    aspect-ratio: 4/3;
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
