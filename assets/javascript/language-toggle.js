@@ -46,6 +46,13 @@ function setLanguage(lang) {
     
     const activeBtn = document.getElementById(`btn-${lang}`);
     if (activeBtn) activeBtn.classList.add('lang-button-active');
+
+    // Img Toggle
+    const logoimg = document.querySelector(".img-logo");
+    if (logoimg) {
+        logoimg.src = `./assets/images/logo/Logo horizontal ${lang === 'ar' ? 'rtl' : 'ltr'}.png`;
+    }
+
 }
 
 // Event Listeners

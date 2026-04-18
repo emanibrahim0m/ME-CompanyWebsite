@@ -231,3 +231,116 @@ html[lang="ar"] .button {
         color: var(--Brightyellow);
     }
 }
+
+/* header */
+/* Topbar */
+.topbar {
+    padding: 0 clamp(3%, 4vw, 8%);
+    background: var(--Brightyellow);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topbar-rightside {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Navigation */
+.navbar, .nav-list {
+    background-color: var(--Dark-blue);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: clamp(1rem, 1vw, 2rem);
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0.3rem clamp(3%, 4vw, 8%);
+    gap: 1rem;
+    top: 0;
+}
+
+.img-logo{
+    height: 3.5rem; 
+}
+.html[lang="ar"] .logo {
+    background-image: url('./assets/images/logo/logo-ar.png');
+}
+
+.nav-item {
+    color: var(--Warm-cream);
+    font-size: var(--textsize-small);
+    font-weight: 400;
+}
+
+.nav-item :hover {
+    color: var(--Brightyellow);
+}
+
+/* on scroll  */
+.navbar { 
+    position: sticky;
+    z-index: 999;
+}
+
+/* Hamburger Menu */
+.ham-menu {
+    display: none;
+}
+
+@media (max-width: 870px) {
+    .topbar-rightside {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .ham-menu {
+        display: block;
+        
+    }
+
+    .nav-list {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: var(--Brightyellow);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        right: -100%;
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+        top: 7.9rem;
+    }
+    html[lang="ar"] .nav-list {
+        right: auto;
+        left: -100%;
+    }
+    html[lang="ar"] .nav-list.active {
+        left: 0%;
+    }
+
+    .nav-bottom {
+        top: 4.3rem;
+    }
+
+    .nav-item a{
+        color: var(--Dark-blue);
+        font-size: var(--textsize-small);
+    }
+
+    .nav-item a:hover {
+        color: var(--Warm-cream);
+    }
+
+    .nav-list.active{ 
+        right: 0%;}
+}
