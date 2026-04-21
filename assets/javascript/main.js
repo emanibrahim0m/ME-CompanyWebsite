@@ -1,9 +1,9 @@
 // Header
-const header = document.querySelector("#header");
+const topbar_container = document.querySelector("#topbar");
+const nav_container = document.querySelector("#navigation");
 
-// topbar
-header.innerHTML = `
-    <!-- Header -->
+topbar_container.innerHTML = `
+<!-- Header -->
     <header>
       <!-- contact-top-bar -->
       <div class="topbar">
@@ -40,8 +40,9 @@ header.innerHTML = `
         </div>
       </div>
     </header>
-
-    <!-- Navigation -->
+`;
+nav_container.innerHTML = `
+<!-- Navigation -->
     <nav class="navbar" aria-label="Main navigation">
         <img
           src="./assets/images/logo/Logo horizontal ltr.png"
@@ -56,6 +57,7 @@ header.innerHTML = `
         <li class="nav-item"><a href="./products.html">Products</a></li>
         <li class="nav-item"><a href="./projects.html">Projects</a></li>
         <li class="nav-item"><a href="./contact.html">Contact US</a></li>
+        <li class="nav-item"><a href="./assets/documents/MiddleEast-Brochure 2025.pdf" download>MiddleEast-Brochure 2025</a></li>
         <button class="button button-primary-light nav-btn">
           GET A Quote
           <img
@@ -102,6 +104,141 @@ window.addEventListener('scroll', () => {
         nav_list.classList.remove("nav-bottom");
     }
 });
+
+// Logos Section 
+// Data structure
+
+
+const logos = document.querySelector(".logo-componant");
+if (logos) {
+logos.innerHTML += `
+  <div class="logo-scroll-wrapper">
+    <div class="logo-track">
+      <img
+        class="product-logo"
+        src="./assets/images/logos/afico.jpg"
+        alt="afico logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/afs.jpg"
+        alt="afs logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/asmaco.png"
+        alt="asmaco logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/fibrock.png"
+        alt="fibrock logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/foster.png"
+        alt="foster logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/glassrock.jpg"
+        alt="glassrock logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/gulf-o-flex.jpg"
+        alt="gulf-o-flex logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/izocam.png"
+        alt="izocam logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/kimmco isover.png"
+        alt="kimmco isover logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/l'isolante k-flex.png"
+        alt="l'isolante k-flex logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/pa-flex.jpg"
+        alt="pa-flex logo"
+      />
+      <img
+        class="product-logo"
+        src="./assets/images/logos/techno metal.png"
+        alt="techno metal logo"
+      />
+
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/afico.jpg"
+        alt="afico logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/afs.jpg"
+        alt="afs logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/asmaco.png"
+        alt="asmaco logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/fibrock.png"
+        alt="fibrock logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/foster.png"
+        alt="foster logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/glassrock.jpg"
+        alt="glassrock logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/gulf-o-flex.jpg"
+        alt="gulf-o-flex logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/izocam.png"
+        alt="izocam logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/kimmco isover.png"
+        alt="kimmco isover logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/l'isolante k-flex.png"
+        alt="l'isolante k-flex logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/pa-flex.jpg"
+        alt="pa-flex logo"
+      />
+      <img
+        class="product-logo D-product-logo"
+        src="./assets/images/logos/techno metal.png"
+        alt="techno metal logo"
+      />
+    </div>
+  </div>
+  `}
+
 
 // Footer
 const footer = document.querySelector("#footer");
@@ -170,7 +307,8 @@ footer.innerHTML = `
             <ul>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./about.html">About</a></li>
-              <li><a href="./services.html">Service</a></li>
+              <li><a href="./products.html">Products</a></li>
+              <li><a href="./projects.html">Projects</a></li>
               <li><a href="./contact.html">Contact</a></li>
               <li><a href="./assets/documents/MiddleEast-Brochure 2025.pdf" download>MiddleEast-Brochure 2025</a></li>
             </ul>

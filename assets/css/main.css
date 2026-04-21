@@ -64,7 +64,7 @@
     --En-font: 'JetBrains Mono', sans-serif;
     --Ar-font: 'Cairo', sans-serif;
     --textsize-large: clamp(2.5rem, 5vw, 2rem);
-    --textsize-medium: clamp(1.5rem, 4vw, 2rem);
+    --textsize-medium: clamp(1.5rem, 4vw, 1.5rem);
     --textsize-regular: 1.125rem;
     --textsize-small: 1rem;
     --textsize-tiny: 0.875rem;
@@ -77,7 +77,7 @@
 
 /* Heading Text */
 h1{font-size: clamp(2.5rem, 8vw, 4.5rem);}
-h2{font-size: clamp(2rem, 6vw, 3.5rem);}
+h2{font-size: clamp(1.5rem, 6vw, 3.5rem);}
 h3{font-size: clamp(1.5rem, 4vw, 2.25rem);}
 h4{font-size: clamp(1.25rem, 3vw, 1.75rem);}
 h5{font-size: clamp(1rem, 2.5vw, 1.25rem);}
@@ -109,9 +109,10 @@ body {
 }
 
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding: 0 var(--side);
+    padding-bottom: 3rem;
+    /* padding-top: 2rem; */
+    padding-left: var(--side);
+    padding-right: var(--side);
 }
 
 a {
@@ -297,7 +298,7 @@ html[lang="ar"] .button {
 
 .nav-item {
     color: var(--Warm-cream);
-    font-size: var(--textsize-small);
+    font-size: var(--textsize-tiny);
     font-weight: 400;
 }
 
@@ -306,7 +307,7 @@ html[lang="ar"] .button {
 }
 
 /* on scroll  */
-.navbar { 
+#navigation { 
     position: sticky;
     top: 0;
     z-index: 999;
@@ -470,7 +471,7 @@ html[lang="ar"] .button {
     gap: 2rem;
     height: 100%;
     position: relative; 
-    min-height: 80vh;
+    min-height: 75vh;
     margin-bottom: 3.5rem;
 }
 
@@ -513,12 +514,14 @@ html[lang="ar"] .hero-v1::before {
     color: var(--Brightyellow);
     text-shadow: 2px 2px 4px var(--Dark-blue);
 }
-.hero-highlight-v2 {
+.hero-highlight-v2, .hero-title-v1 {
     color: var(--Dark-blue);
     text-align: center 
 }
 
 .hero-description-v1 {
+    color: var(--Dark-blue);
+    font-size: var(--textsize-small);
     font-weight: 700;
     max-width: 55%;
 }
@@ -606,4 +609,80 @@ html[lang="ar"] .hero-v1::before {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+/* Logos section */
+.logo-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-component-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.logo-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  gap: clamp(2rem, 7vw, 5rem);
+  animation: scroll 50s infinite linear;
+  width: max-content;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.product-logo {
+  height: clamp(0.5rem, 4vw, 3.5rem);
+  width: auto;
+  opacity: 0.6;
+  filter: grayscale(30%);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.product-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 500px) {
+  .logo-scroll-wrapper {
+    width: 100%;
+    mask-image: none;
+    overflow: visible;
+  }
+  .logo-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    animation: none;
+    width: 100%;
+  }
+  .product-logo {
+    justify-self: center;
+  }
+
+  .D-product-logo {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logos-icons {
+        animation: none;
+        overflow-x: auto;
+    }
 }
