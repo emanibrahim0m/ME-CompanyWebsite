@@ -236,9 +236,123 @@ logos.innerHTML += `
         alt="techno metal logo"
       />
     </div>
+      <hr class="footer-divider" />
   </div>
   `}
 
+// Contact Section
+const contact_us = document.querySelector(".contact_us_section");
+if (contact_us) {
+  contact_us.innerHTML = `
+  <!-- contact us -->
+  <div class="contact-section-left">
+    <span class="contact-section-title">Get In Touch</span>
+    <h2 class="Contact-section-head">Contact Us</h2>
+    <p class="contact-section-text">
+      Middle East for Supplies & Contracting is a leading supplier of
+      thermal and sound insulation materials, delivering reliable
+      solutions for industrial and construction projects across Egypt.
+    </p>
+    <div class="social-media-v2-container">
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/mail.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <a href="mailto:middleeastco.eg@hotmail.com" class="social-link">
+          <strong>Email Address</strong>
+          <p>middleeastco.eg@hotmail.com</p>
+        </a>
+      </div>
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/location-pin.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <div>
+          <strong>Main Office:</strong>
+          <p>Alexandria, Egypt</p>
+        </div>
+      </div>
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/phone.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <a href="tel:+20 111 494 9181" class="social-link">
+          <strong>Phone Number</strong>
+          <p>+20 111 494 9181</p>
+        </a>
+      </div>
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/location-pin.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <div>
+          <strong>Warehouse:</strong>
+          <p>Alexandria, Egypt</p>
+        </div>
+      </div>
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/phone.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <a href="tel:+20 111 039 8275" class="social-link">
+          <strong>Phone Number</strong>
+          <p>+20 111 039 8275</p>
+        </a>
+      </div>
+      <div class="social-componant social-componant-v2">
+        <img
+          src="./assets/images/icons/location-pin.svg"
+          alt="arrow"
+          width="25"
+          height="25"
+        />
+        <div>
+          <strong>Warehouse:</strong>
+          <p>Cairo – Belbis Desert Road</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact-form-card">
+    <h3>Request A Quote</h3>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <div class="form-row">
+        <input type="tel" placeholder="Phone" />
+        <select>
+          <option>Service Type</option>
+          <option>Insulation</option>
+          <option>General Contracting</option>
+        </select>
+      </div>
+      <textarea
+        placeholder="Tell us about your project..."
+        rows="4"
+      ></textarea>
+      <button type="submit" class="submit-btn">SEND MESSAGE</button>
+    </form>
+   </div>
+
+  `;
+}
 
 // Footer
 const footer = document.querySelector("#footer");
