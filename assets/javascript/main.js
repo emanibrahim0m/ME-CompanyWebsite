@@ -236,7 +236,6 @@ logos.innerHTML += `
         alt="techno metal logo"
       />
     </div>
-      <hr class="footer-divider" />
   </div>
   `}
 
@@ -246,7 +245,7 @@ if (contact_us) {
   contact_us.innerHTML = `
   <!-- contact us -->
   <div class="contact-section-left">
-    <span class="contact-section-title">Get In Touch</span>
+    <span class="Section-tag">Get In Touch</span>
     <h2 class="Contact-section-head">Contact Us</h2>
     <p class="contact-section-text">
       Middle East for Supplies & Contracting is a leading supplier of
